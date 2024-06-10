@@ -80,7 +80,7 @@ const Login = () => {
           </p>
 
           <div className="mb-5 flex-row items-center justify-center">
-            {/* <InputField/>  */}
+          
             <Phone className="max-w-1/2" />
             <p className="text-white flex item-center justify-center mb-3 font-light text-sm item-center">
               Or
