@@ -83,10 +83,18 @@ const Phone = () => {
       .confirm(otp)
       .then(async (res) => {
         // setUserUid(res.user.uid);
-        console.log("Otp successful", res);
+        toast.success("OTP Verfification Successful !");
+        router.push({
+          pathname: "/form",
+          query: {
+            uid: res.user.uid,
+        //pass user phone number here 
+            // Email: res.user.email,
+          }})
         setLoading(false);
       })
       .catch((err) => {
+        toast.error("Vertification Failed ", err);
         console.log(err);
         setLoading(false);
       });
@@ -125,7 +133,7 @@ const Phone = () => {
                 ></OtpInput>
                 <button
                   onClick={onOTPVerify}
-                  className="bg- w-full flex gap-1 items-center justify-center py-2.5 text-blue-500 rounded"
+                  className="bg-blue-500 w-full flex gap-1 items-center justify-center py-2.5 text-white rounded"
                 >
                   {loading && (
                     <CgSpinner size={20} className="mt-1 animate-spin" />
