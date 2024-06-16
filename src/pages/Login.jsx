@@ -60,13 +60,14 @@ const Login = () => {
         alt="Background"
         className="absolute inset-0 w-screen h-screen object-cover"
       />
-
+      <div className="h-screen w-screen flex lg:items-center lg:justify-around   max-md:justify-center" >
       <div className="w-1/4  flex items-center justify-center align-middle relative">
         <Image
           src="/logo.png"
           width={300}
           height={300}
           alt="Sangeetmaychinmay"
+          className="w-10vh "
         />
       </div>
 
@@ -104,6 +105,7 @@ const Login = () => {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );
